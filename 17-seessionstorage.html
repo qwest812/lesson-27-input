@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    // Получаем ссылку на текстовое поле,
+    // изменение которого будем отслеживать.
+    var field = document.getElementById("field");
+
+    // Проверяем наличие значения 'autosave'
+    // (это может произойти только если страница будет случайно обновлена)
+    if (sessionStorage.getItem("autosave")) {
+        // Восстанавливаем содержимое текстового поля
+        field.value = sessionStorage.getItem("autosave");
+    }
+
+    // Отслеживаем все изменения в текстовом поле
+    field.addEventListener("change", function() {
+        // И сохраняем их в объект session storage
+        sessionStorage.setItem("autosave", field.value);
+    }
+
+
+    // Syntax for SAVING data to sessionStorage:
+    //
+    //     sessionStorage.setItem("key", "value");
+    // Syntax for READING data from sessionStorage:
+    //
+    //     var lastname = sessionStorage.getItem("key");
+    // Syntax for REMOVING saved data from sessionStorage:
+    //
+    //     sessionStorage.removeItem("key");
+    // Syntax for REMOVING ALL saved data from sessionStorage:
+    //
+    //     sessionStorage.clear();
+</script>
+</body>
+</html>

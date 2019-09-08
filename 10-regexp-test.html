@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    // regexp.test(str)
+    // Метод test проверяет, есть ли хоть одно совпадение в строке str. Возвращает true/false.
+    var str = "Люблю регэкспы я, но странною любовью";
+
+    // эти две проверки идентичны
+    alert( /лю/i.test(str) ) // true
+    alert( str.search(/лю/i) != -1 ) // true
+
+</script>
+</body>
+</html>

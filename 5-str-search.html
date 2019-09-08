@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str = "Я люблю JavaScript!"; // будем искать в этой строке
+
+    var regexp = /лю/;
+    alert( str.search(regexp) ); // 2
+
+    var substr = "лю";
+    alert( str.indexOf(substr) ); // 2
+
+
+
+    // str.search(reg)
+
+    //  возвращает позицию первого совпадения или -1, если ничего не найдено.
+    var str = "Люблю регэкспы я, но странною любовью";
+
+    alert( str.search( /лю/i ) ); // 0
+
+
+
+</script>
+</body>
+</html>

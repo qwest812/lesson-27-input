@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //create new webcoket object
+    var socket = new WebSocket("ws://javascript.ru/ws");
+
+
+    // four types callback for state of connection
+    socket.onopen = function() {
+        alert("Соединение установлено.");
+    };
+
+    socket.onclose = function(event) {
+        if (event.wasClean) {
+            alert('Соединение закрыто чисто');
+        } else {
+            alert('Обрыв соединения'); // например, "убит" процесс сервера
+        }
+        alert('Код: ' + event.code + ' причина: ' + event.reason);
+    };
+
+    socket.onmessage = function(event) {
+        alert("Получены данные " + event.data);
+    };
+
+    socket.onerror = function(error) {
+        alert("Ошибка " + error.message);
+    };
+
+
+    // text sending example
+    socket.send('{ "type": "hello", "apikey": "BA822A12-5DB7-40B2-AFB5-56935BB411B4", "heartbeat": false, "subscribe_data_type": ["trade", "quote", "book50"] }');
+
+
+    // file sending example
+    socket.send(form.elements[0].file);
+
+
+    // close web socket
+    socket.close();
+
+
+</script>
+</body>
+</html>

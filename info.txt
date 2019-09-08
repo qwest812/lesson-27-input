@@ -1,0 +1,22 @@
+regular expression
+https://www.exlab.net/tools/sheets/regexp.html
+
+difference between local storage session storage
+http://qaru.site/questions/19679/what-is-the-difference-between-localstorage-sessionstorage-session-and-cookies
+
+local storage
+https://blog.logrocket.com/the-complete-guide-to-using-localstorage-in-javascript-apps-ba44edb53a36
+
+create local sockets server
+npm init
+download package wscat
+npm install -g wscat
+
+create ralationship with wscat
+wscat --connect wss://ws.coinapi.io/v1/
+
+registration
+https://www.coinapi.io/pricing
+
+read documentation
+https://docs.coinapi.io/#endpoint

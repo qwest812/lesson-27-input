@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var text1 = myVid.addTextTrack("caption");
+    text1.addCue(new TextTrackCue("Test text", 01.000, 04.000, "", "", "", true));
+
+    // Check if your browser can play different types of video:
+    var vid = document.createElement('video');
+    isSupp = vid.canPlayType(vidType+';codecs="'+codType+'"');
+
+
+    // Change the video source and re-load the video:
+        document.getElementById("mp4_src").src = "movie.mp4";
+    document.getElementById("ogg_src").src = "movie.ogg";
+    document.getElementById("myVideo").load();
+
+
+    // An audio player with play and pause buttons:
+
+        var x = document.getElementById("myAudio");
+
+    function playAudio() {
+        x.play();
+    }
+
+    function pauseAudio() {
+        x.pause();
+    }
+
+
+    // A video with play and pause buttons:
+
+        var vid = document.getElementById("myVideo");
+
+    function playVid() {
+        vid.play();
+    }
+
+    function pauseVid() {
+        vid.pause();
+    }
+</script>
+</body>
+</html>

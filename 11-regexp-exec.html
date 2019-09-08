@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    var str = 'Многое по JavaScript можно найти на сайте http://javascript.ru';
+
+    var regexp = /javascript/ig;
+    var result;
+
+    console.log("Начальное значение lastIndex: " + regexp.lastIndex);
+
+    while (result = regexp.exec(str)) {
+        alert( 'Найдено: ' + result[0] + ' на позиции:' + result.index );
+        alert( 'Свойство lastIndex: ' + regexp.lastIndex );
+    }
+
+    console.log('Конечное значение lastIndex: ' + regexp.lastIndex);
+</script>
+</body>
+</html>

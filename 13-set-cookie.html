@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var date = new Date(new Date().getTime() + 60 * 1000);
+    document.cookie = "name=value; path=/; expires=" + date.toUTCString();
+    // name    название cookie
+    // value    значение cookie (строка)
+    // options    Объект с дополнительными свойствами для установки cookie:
+
+    // path=/, то есть cookie доступно со всех страниц сайта.
+    // domain=site.com    Домен, на котором доступно cookie.
+    // expires=Tue, 19 Jan 2038 03:14:07 GMT    Дата истечения куки в формате GMT.
+    // expires Переменная является устаревшим , хотя по- прежнему поддерживается сегодняшними браузерами. max-age
+    // secure    Cookie можно передавать только по HTTPS.
+
+
+</script>
+</body>
+</html>
